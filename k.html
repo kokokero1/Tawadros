@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Open and Write Text in a Txt File</title>
+</head>
+<body>
+<h1>Open and Write Text in a Txt File</h1>
+<p>This example shows how to open and write text in a txt file using HTML and JavaScript.</p>
+<textarea id="textArea" rows="10" cols="50"></textarea>
+<input type="text" id="fileName" />
+<button onclick="saveText()">Save Text</button>
+<script>
+function saveText() {
+  // Get the text from the textarea
+  var text = document.getElementById("textArea").value;
+  // Get the file name from the input field
+  var fileName = document.getElementById("fileName").value;
+  // Create a new FileWriter object
+  var fileWriter = new FileWriter(fileName);
+  // Write the text to the file
+  fileWriter.write(text);
+  // Close the file
+  fileWriter.close();
+}
+</script>
+</body>
+</html>
